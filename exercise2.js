@@ -41,6 +41,7 @@ function changeMe(arr) {
       console.log(obj);
     }
   }
+  return;
 }
 
 // TEST CASES

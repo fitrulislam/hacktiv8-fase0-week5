@@ -66,6 +66,7 @@ function shoppingTime(memberId, money) {
     }
   }
   console.log('-------------------');
+  return;
 }
 
 // TEST CASES
