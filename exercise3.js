@@ -43,10 +43,10 @@ changeMoney: 25000 }
 function shoppingTime(memberId, money) {
   console.log('-------------------');
   if(memberId==='' || undefined || money===undefined){
-    console.log('Mohon maaf, toko X hanya berlaku untuk member saja');
+    return 'Mohon maaf, toko X hanya berlaku untuk member saja';
   } else {
     if(money<50000){
-      console.log('Mohon maaf, uang tidak cukup');
+      return 'Mohon maaf, uang tidak cukup'
     } else {
       var merek = [ ['Sepatu Stacattu', 1500000], ['Baju Zoro', 500000], ['Baju H&N', 250000],
                     ['Sweater Uniklooh', 175000], ['Casing Handphone', 50000] ];
@@ -62,11 +62,10 @@ function shoppingTime(memberId, money) {
       }
       obj.listPurchased = arr;
       obj.chargeMoney = money;
-      console.log(obj);
+      return obj;
     }
   }
   console.log('-------------------');
-  return;
 }
 
 // TEST CASES
