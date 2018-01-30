@@ -26,27 +26,38 @@ output: ['i', 'am', 'so', 'amazed']
 // 5. return array
 
 function breakSentence(sentence) {
-  var tamp = '';
+  // var tamp = '';
+  // var arr = [];
+  // for(var i=0; i<sentence.length; i++){
+  //   tamp += sentence[i];
+  //   if(sentence[i]===' '){
+  //     arr.push(tamp);
+  //     tamp = '';
+  //   }
+  // }
+  // var arr2 = [];
+  // var tamp2 = '';
+  // for(var j=0; j<arr.length; j++){
+  //   for(var k=0; k<arr[j].length-1; k++){
+  //     tamp2 += arr[j][k];
+  //   }
+  //   arr2.push(tamp2);
+  //   tamp2 = '';
+  // }
+  // arr2.push(tamp);
+  // return arr2;
+  var kata = '';
   var arr = [];
-  for(var i=0; i<sentence.length; i++){
-    tamp += sentence[i];
-    if(sentence[i]===' '){
-      arr.push(tamp);
-      tamp = '';
+  for(var j=0; j<sentence.length; j++){
+    if(sentence[j]===' '){
+      arr.push(kata);
+      kata = '';
+    } else {
+      kata += sentence[j];
     }
   }
-  var arr2 = [];
-  var tamp2 = '';
-  for(var j=0; j<arr.length; j++){
-    var arr3 = arr[j]
-    for(var k=0; k<arr3.length-1; k++){
-      tamp2 += arr3[k];
-    }
-    arr2.push(tamp2);
-    tamp2 = '';
-  }
-  arr2.push(tamp);
-  return arr2;
+  arr.push(kata);
+  return arr;
 }
 
 console.log(breakSentence('I am so amazed')); // ['I', 'am', 'so', 'amazed' ]
