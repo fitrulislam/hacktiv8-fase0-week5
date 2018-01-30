@@ -20,14 +20,8 @@ function makanTerusRekursif(waktu) {
   if(waktu<=0){
     return 0;
   } else {
-    var angkaPertama = 1;
-    var count = 0;
-    var sisa = waktu - 15;
-    for(var i=sisa; i>0; i-=15){
-      count += 1;
-    }
-    // console.log(count);
-    return angkaPertama + makanTerusRekursif(sisa);
+    var first = 1;
+    return first + makanTerusRekursif(waktu-15);
   }
 }
 

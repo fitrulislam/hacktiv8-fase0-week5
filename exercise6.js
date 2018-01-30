@@ -11,17 +11,14 @@ lakukan 1 * 2 * 0 = 0. 0 satu digit, maka hasilnya adalah 0.
 */
 
 function kaliTerusRekursif(angka) {
-  var string = angka.toString();
-  if(string.length===1){
-    return Number(string);
+  var str = angka.toString();
+  if(str.length===1){
+    return Number(str);
   } else {
-    var perkalian = 1;
-    var angkapertama = Number(string[0])
-    var sisa = string.slice(1)
-    for(var i=0; i<sisa.length; i++){
-      perkalian *= sisa[i];
+    var hasil = 1;
+    for(var i=0; i<str.length; i++){
+      hasil *=str[i];
     }
-    var hasil = angkapertama * kaliTerusRekursif(sisa)
     return kaliTerusRekursif(hasil);
   }
 }

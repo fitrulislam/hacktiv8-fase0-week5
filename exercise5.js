@@ -9,13 +9,13 @@ Contoh:
 */
 
 function totalDigitRekursif(angka) {
-  var string = angka.toString();
-  if(string.length===1){
-    return Number(string);
+  var str = angka.toString();
+  if(str.length===1){
+    return Number(str);
   } else {
-    var first = Number(string[0]);
-    var sec = string.slice(1);
-    return first + totalDigitRekursif(sec);
+    var first = Number(str[0]);
+    var sisa = str.slice(1);
+    return first + totalDigitRekursif(sisa);
   }
 }
 
